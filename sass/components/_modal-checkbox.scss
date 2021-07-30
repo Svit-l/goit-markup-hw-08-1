@@ -1,0 +1,64 @@
+.modal-check-wrap {
+  position: relative;
+}
+
+.modal-checkbox {
+  position: absolute;
+  bottom: 0;
+  left: 8px;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
+}
+
+.modal-checkbox-lable {
+  position: relative;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: var(--small-text-color);
+
+  &::before {
+    content: "";
+    display: block;
+    cursor: pointer;
+    margin-right: 7px;
+  }
+
+  .modal-checkbox + &::before {
+    background-image: url("../img/icon-agree-uncheck.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 16px;
+    height: 15px;
+  }
+
+  .modal-checkbox:checked + &::before {
+    background-image: url("../img/icon-agree-check.svg");
+  }
+
+  .modal-checkbox:focus + &::before {
+    background-image: url("../img/icon-agree-uncheck.svg");
+    outline: 1px dotted rgb(73, 71, 71);
+  }
+
+  .modal-checkbox:checked:focus + &::before {
+    background-image: url("../img/icon-agree-check.svg");
+    outline: 1px dotted rgb(73, 71, 71);
+  }
+}
+
+.policy-link {
+  color: var(--accent-color);
+
+  &:focus,
+  &:hover {
+    outline: 1px dotted rgb(73, 71, 71);
+  }
+}

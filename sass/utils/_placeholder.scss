@@ -1,0 +1,22 @@
+%btn {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+  text-align: center;
+  color: var(--another-main-color);
+
+  background-color: var(--accent-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border: none;
+  border-radius: 4px;
+
+  transition: var(--transition-background-color);
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background-color: #188ce8;
+    outline: 1px dotted rgb(73, 71, 71);
+  }
+}

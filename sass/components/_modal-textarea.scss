@@ -1,0 +1,32 @@
+.modal-textarea-label {
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+  color: var(--small-text-color);
+  margin-bottom: 20px;
+}
+
+.modal-user-coment {
+  width: 100%;
+  resize: none;
+  height: 120px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  padding: 12px 16px;
+  margin-top: 4px;
+  transition: var(--transition-border);
+
+  &:hover,
+  &:focus {
+    outline: none;
+    border: 1px solid var(--accent-color);
+    border-radius: 4px;
+  }
+
+  &::placeholder {
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.01em;
+    color: rgba(117, 117, 117, 0.5);
+  }
+}
