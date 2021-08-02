@@ -8,6 +8,11 @@
     align-items: center;
   }
 
+  &__logo {
+    @include logo;
+    margin-right: 94px;
+  }
+
   &__mail {
     margin-right: 50px;
     margin-left: auto;

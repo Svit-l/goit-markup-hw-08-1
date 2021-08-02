@@ -1,19 +1,13 @@
 .footer__links {
-  padding-top: 12px;
-}
-
-.footer__subtitle {
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  color: var(--another-main-color);
-  margin-bottom: 20px;
+  @media screen and (min-width: 1200px) {
+    padding-top: 12px;
+    margin-left: 70px;
+  }
 }
 
 .footer__social-list {
   display: flex;
+  justify-content: center;
 }
 
 .footer__social-item {

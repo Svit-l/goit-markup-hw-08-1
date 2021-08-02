@@ -3,7 +3,7 @@
   flex-direction: column;
 
   &__submit {
-    @extend %btn;
+    @include btn;
     align-self: center;
     margin-top: 30px;
     display: block;

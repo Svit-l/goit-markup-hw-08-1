@@ -1,15 +1,30 @@
 .footer__form {
-  padding-top: 12px;
-  margin-left: auto;
+  @media screen and (min-width: 1200px) {
+    margin-left: auto;
+    padding-top: 12px;
+  }
 
   &-wrap {
-    display: flex;
+    @media screen and (min-width: 1200px) {
+      display: flex;
+    }
+  }
+}
+
+.footer__mailing-label {
+  display: block;
+  max-width: 450px;
+  margin: 0 auto 20px;
+  @media screen and (min-width: 1200px) {
+    width: 358px;
+    margin-right: 12px;
+    margin-bottom: 0;
   }
 }
 
 .footer__form-field {
   display: inline-block;
-  width: 358px;
+  width: 100%;
   height: 50px;
   background-color: transparent;
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -22,7 +37,7 @@
   align-items: center;
   letter-spacing: 0.03em;
   color: var(--another-main-color);
-  margin-right: 12px;
+
   transition: var(--transition-border);
 
   &:hover,
@@ -47,12 +62,12 @@
 }
 
 .footer__btn {
-  @extend %btn;
+  @include btn;
   height: 50px;
   display: flex;
   align-items: center;
   padding: 10px 28px;
-
+  margin: 0 auto;
   fill: var(--another-main-color);
 
   &-text {

@@ -1,5 +1,5 @@
 .modal-close-btn {
-  position: absolute;
+  @include open-close-btn;
   top: 8px;
   right: 8px;
   width: 30px;
@@ -7,18 +7,6 @@
   background: var(--another-main-color);
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  fill: #000000;
-  cursor: pointer;
-  transition: var(--transition-fill);
-
-  &:hover,
-  &:focus {
-    fill: var(--accent-color);
-    outline: none;
-  }
 }
 
 .close-icon {

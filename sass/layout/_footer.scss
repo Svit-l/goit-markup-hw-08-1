@@ -1,26 +1,65 @@
 .footer {
   background: #2f303a;
-  padding-top: 60px;
-  padding-bottom: 60px;
-
-  &__wrap {
-    display: flex;
+  text-align: center;
+  @media screen and (min-width: 1200px) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    text-align: start;
   }
 
-  &__contacts {
-    margin-right: 70px;
+  &__first-box {
+    margin-bottom: 60px;
+    @media screen and (min-width: 768px) {
+      display: flex;
+    }
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      justify-content: space-between;
+      padding-left: 60px;
+      padding-right: 74px;
+    }
+    @media screen and (min-width: 1200px) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__desktop-wrap {
+    @media screen and (min-width: 1200px) {
+      display: flex;
+    }
   }
 
   &__logo {
+    @include logo;
+    margin-bottom: 20px;
+  }
+
+  &__contacts {
+    margin-bottom: 60px;
+    @media screen and (min-width: 768px) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__subtitle {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--another-main-color);
     margin-bottom: 20px;
   }
 }
 
 .address {
-  font-style: normal;
+  font-style: inherit;
 
   &__list-item:not(:last-child) {
-    margin-bottom: 9px;
+    margin-bottom: 8px;
+
+    @media screen and (min-width: 1200px) {
+      margin-bottom: 9px;
+    }
   }
 
   &__location {
