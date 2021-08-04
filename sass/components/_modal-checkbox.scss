@@ -18,21 +18,26 @@
 .modal-checkbox-lable {
   position: relative;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  font-size: 14px;
-  line-height: 1.71;
+  font-size: 12px;
+  line-height: 1.17;
   letter-spacing: 0.03em;
   color: var(--small-text-color);
+  @media screen and (min-width: 1200px) {
+    font-size: 14px;
+    line-height: 1.71;
+  }
 
   &::before {
-    content: "";
+    content: '';
     display: block;
     cursor: pointer;
     margin-right: 7px;
   }
 
   .modal-checkbox + &::before {
-    background-image: url("../img/icon-agree-uncheck.svg");
+    background-image: url('../img/icon-agree-uncheck.svg');
     background-repeat: no-repeat;
     background-size: cover;
     width: 16px;
@@ -40,16 +45,16 @@
   }
 
   .modal-checkbox:checked + &::before {
-    background-image: url("../img/icon-agree-check.svg");
+    background-image: url('../img/icon-agree-check.svg');
   }
 
   .modal-checkbox:focus + &::before {
-    background-image: url("../img/icon-agree-uncheck.svg");
+    background-image: url('../img/icon-agree-uncheck.svg');
     outline: 1px dotted rgb(73, 71, 71);
   }
 
   .modal-checkbox:checked:focus + &::before {
-    background-image: url("../img/icon-agree-check.svg");
+    background-image: url('../img/icon-agree-check.svg');
     outline: 1px dotted rgb(73, 71, 71);
   }
 }

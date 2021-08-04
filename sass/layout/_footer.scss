@@ -2,12 +2,12 @@
   background: #2f303a;
   text-align: center;
   @media screen and (min-width: 1200px) {
+    text-align: start;
     padding-top: 60px;
     padding-bottom: 60px;
-    text-align: start;
   }
 
-  &__first-box {
+  &__first-unite {
     margin-bottom: 60px;
     @media screen and (min-width: 768px) {
       display: flex;
@@ -41,13 +41,12 @@
   }
 
   &__subtitle {
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 1.14;
-    letter-spacing: 0.03em;
-    text-transform: uppercase;
+    @include subtitle;
     color: var(--another-main-color);
     margin-bottom: 20px;
+    @media screen and (min-width: 1200px) {
+      text-align: start;
+    }
   }
 }
 

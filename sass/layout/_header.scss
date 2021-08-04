@@ -1,18 +1,15 @@
-.header {
-  padding-top: 24px;
-  padding-bottom: 25px;
-  border-bottom: 1px solid #ececec;
+.header__big-screen {
+  display: none;
 
-  &__container {
+  @media screen and (min-width: 1200px) {
     display: flex;
+    height: 80px;
     align-items: center;
+    border-bottom: 1px solid #ececec;
   }
+}
 
-  &__logo {
-    @include logo;
-    margin-right: 94px;
-  }
-
+.header {
   &__mail {
     margin-right: 50px;
     margin-left: auto;

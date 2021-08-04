@@ -1,9 +1,10 @@
-.header__nav {
+.big-screen-nav {
   display: flex;
   align-items: center;
 }
 
 .header__logo {
+  @include logo;
   margin-right: 94px;
 }
 
@@ -36,7 +37,7 @@
     color: var(--accent-color);
 
     &::after {
-      content: "";
+      content: '';
       display: block;
       width: 100%;
       height: 4px;
