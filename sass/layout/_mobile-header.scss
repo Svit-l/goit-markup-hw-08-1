@@ -1,40 +1,62 @@
-.mobile-nav {
+.mobile-header {
+  height: 60px;
+  width: auto;
   display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #ececec;
+  position: relative;
   @media screen and (min-width: 768px) {
     display: none;
   }
+}
 
+.mobile-menu {
+  position: absolute;
   opacity: 0;
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateX(100%);
+}
 
-  &.is-open {
-    opacity: 1;
-    flex-direction: column;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    z-index: 1001;
+.mobile-menu.is-open {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #ffffff;
+  z-index: 1001;
 
-    background-color: #ffffff;
-    padding: 48px 40px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08),
-      0px 1px 3px rgba(0, 0, 0, 0.16);
-  }
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
 
-  &__btn {
-    @include open-close-btn;
-    right: 15px;
-    top: 10px;
-    width: 40px;
-    height: 40px;
-    background-color: transparent;
-    border: none;
-    @media screen and (min-width: 768px) {
-      display: none;
-    }
-  }
+  transform: translateX(0);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08),
+    0px 1px 3px rgba(0, 0, 0, 0.16);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mobile-nav__container {
+  height: 100vh;
+  padding: 48px 25px;
+  display: flex;
+  flex-direction: column;
+}
+
+.mobile-nav {
+  position: relative;
+}
+
+.mobile-nav__btn {
+  @include open-close-btn;
+  right: 15px;
+  top: 10px;
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  border: none;
 }
 
 .top-list__item:not(:last-child) {
@@ -64,21 +86,21 @@
   margin-top: auto;
 }
 
-.mobile-nav__mail {
+.mobile-nav__tel {
   display: block;
   font-weight: 500;
   font-size: 34px;
-  line-height: 1.18;
+  line-height: 1.17;
   letter-spacing: 0.02em;
   color: var(--accent-color);
   margin-bottom: 32px;
 }
 
-.mobile-nav__tel {
+.mobile-nav__mail {
   display: block;
   font-weight: 500;
   font-size: 24px;
-  line-height: 1.18;
+  line-height: 1.17;
   letter-spacing: 0.02em;
   color: var(--main-color);
   margin-bottom: 64px;
