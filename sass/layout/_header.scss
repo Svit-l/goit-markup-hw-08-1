@@ -8,22 +8,24 @@
   }
 }
 
-.header__container {
-  display: flex;
-  align-items: center;
-}
+.header {
+  &__container {
+    display: flex;
+    align-items: center;
+  }
 
-.header__nav {
-  display: flex;
-  align-items: center;
-  margin-right: auto;
-}
+  &__nav {
+    display: flex;
+    align-items: center;
+    margin-right: auto;
+  }
 
-.header__logo {
-  @include logo;
-  margin-right: 88px;
-  @media screen and (min-width: 1200px) {
-    margin-right: 94px;
+  &__logo {
+    @include logo;
+    margin-right: 88px;
+    @media screen and (min-width: 1200px) {
+      margin-right: 94px;
+    }
   }
 }
 
@@ -49,7 +51,6 @@
   &:hover,
   &:focus {
     color: var(--accent-color);
-    /* outline: none; */
   }
 
   &-current {

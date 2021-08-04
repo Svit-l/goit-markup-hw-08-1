@@ -518,7 +518,6 @@ body {
 
 .menu__link:hover, .menu__link:focus {
   color: var(--accent-color);
-  /* outline: none; */
 }
 
 .menu__link-current {
