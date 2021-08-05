@@ -915,8 +915,8 @@ body {
 @media screen and (min-width: 768px) {
   .features__list {
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
+    margin-left: -30px;
   }
   .features-item__title {
     text-align: start;
@@ -925,7 +925,8 @@ body {
 
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .features-item {
-    width: calc((100% - 30px) / 2);
+    width: calc((100% - 60px) / 2);
+    margin-left: 30px;
   }
   .features-item:not(:nth-last-child(-n + 2)) {
     margin-bottom: 30px;
@@ -935,6 +936,7 @@ body {
 @media screen and (min-width: 1200px) {
   .features-item {
     width: calc((100% - 120px) / 4);
+    margin-left: 30px;
   }
   .features-item:not(:nth-last-child(-n + 4)) {
     margin-bottom: 30px;
