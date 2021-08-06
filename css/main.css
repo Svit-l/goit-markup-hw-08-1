@@ -361,6 +361,12 @@ body {
   position: relative;
 }
 
+@media screen and (min-width: 1200px) {
+  .modal-check-wrap {
+    margin: 0 auto;
+  }
+}
+
 .modal-checkbox {
   position: absolute;
   bottom: 0;
@@ -873,20 +879,33 @@ body {
   outline: 1px dotted #494747;
 }
 
-.feature-icon {
-  width: 70px;
-  height: 70px;
-  background-color: #f5f4fa;
+.features__list {
+  margin-top: -30px;
 }
 
-.feature-icon-wrap {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 120px;
-  background-color: #f5f4fa;
-  border-radius: 4px;
-  margin-bottom: 30px;
+@media screen and (min-width: 768px) {
+  .features__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -30px;
+  }
+}
+
+.features-item {
+  margin-top: 30px;
+}
+
+@media screen and (min-width: 768px) {
+  .features-item {
+    width: calc((100% - 60px) / 2);
+    margin-left: 30px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .features-item {
+    width: calc((100% - 120px) / 4);
+  }
 }
 
 .features-item__title {
@@ -899,6 +918,12 @@ body {
   margin-bottom: 10px;
 }
 
+@media screen and (min-width: 768px) {
+  .features-item__title {
+    text-align: start;
+  }
+}
+
 .features-item__desc {
   font-size: 14px;
   line-height: 1.71;
@@ -906,41 +931,20 @@ body {
   color: var(--small-text-color);
 }
 
-@media screen and (max-width: 767px) {
-  .features-item:not(:last-child) {
-    margin-bottom: 30px;
-  }
+.features__icon {
+  width: 70px;
+  height: 70px;
+  background-color: #f5f4fa;
 }
 
-@media screen and (min-width: 768px) {
-  .features__list {
-    display: flex;
-    flex-wrap: wrap;
-    margin-left: -30px;
-  }
-  .features-item__title {
-    text-align: start;
-  }
-}
-
-@media screen and (min-width: 768px) and (max-width: 1199px) {
-  .features-item {
-    width: calc((100% - 60px) / 2);
-    margin-left: 30px;
-  }
-  .features-item:not(:nth-last-child(-n + 2)) {
-    margin-bottom: 30px;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .features-item {
-    width: calc((100% - 120px) / 4);
-    margin-left: 30px;
-  }
-  .features-item:not(:nth-last-child(-n + 4)) {
-    margin-bottom: 30px;
-  }
+.features__icon-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 120px;
+  background-color: #f5f4fa;
+  border-radius: 4px;
+  margin-bottom: 30px;
 }
 
 .activity {
